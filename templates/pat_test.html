@@ -1,0 +1,588 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title> Heart Disease Prediction </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+	<!-- CSS here -->
+	<link rel="stylesheet" href="../static/assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../static/assets/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="../static/assets/css/slicknav.css">
+    <link rel="stylesheet" href="../static/assets/css/flaticon.css">
+    <link rel="stylesheet" href="../static/assets/css/gijgo.css">
+    <link rel="stylesheet" href="../static/assets/css/animate.min.css">
+    <link rel="stylesheet" href="../static/assets/css/animated-headline.css">
+	<link rel="stylesheet" href="../static/assets/css/magnific-popup.css">
+	<link rel="stylesheet" href="../static/assets/css/fontawesome-all.min.css">
+	<link rel="stylesheet" href="../static/assets/css/themify-icons.css">
+	<link rel="stylesheet" href="../static/assets/css/slick.css">
+	<link rel="stylesheet" href="../static/assets/css/nice-select.css">
+	<link rel="stylesheet" href="../static/assets/css/style.css">
+
+<style type="text/css">
+.box
+{
+height:30px;
+width:250px;
+border:1px solid #000066;
+}
+
+
+</style>
+<script language="javascript">
+function getSwell()
+{
+	if(document.form1.swelling.value=="Yes")
+	{
+		document.getElementById("x1").style.display="block";
+	}
+	else
+	{
+	document.getElementById("x1").style.display="none";
+	}
+}	
+
+function getRadiates()
+{
+	if(document.form1.radiates.value=="Yes")
+	{
+		document.getElementById("x2").style.display="block";
+	}
+	else
+	{
+	document.getElementById("x2").style.display="none";
+	}
+}
+</script>
+</head>
+<body>
+    <!-- ? Preloader Start -->
+   <!-- <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="../static/assets/img/logo/loder.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>-->
+    <!-- Preloader Start -->
+<header>
+    <!--? Header Start -->
+    <div class="header-area">
+        <div class="main-header header-sticky">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <!-- Logo -->
+                    <div class="col-xl-2 col-lg-2 col-md-1">
+                        <div class="logo">
+                            <a href=""><img src="../static/assets/img/logo/logo.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-10 col-lg-10 col-md-10">
+                        <div class="menu-main d-flex align-items-center justify-content-end">
+                            <!-- Main-menu -->
+                            <div class="main-menu f-right d-none d-lg-block">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a href="/pat_home">Home</a></li>
+                                        <li><a href="/sugg">Suggestion</a></li>
+          								<li><a href="/pat_test">Test</a></li>
+		  								<li><a href="/logout">Logout</a></li>
+                                        
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="header-right-btn f-right d-none d-lg-block ml-30">
+                               <!-- <a href="/register" class="btn header-btn">Register</a>-->
+                            </div>
+                        </div>
+                    </div>   
+                    <!-- Mobile Menu -->
+                    <div class="col-12">
+                        <div class="mobile_menu d-block d-lg-none"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+</header>
+<main>
+    <!--? Hero Start -->
+   
+    <!-- Hero End -->
+    <!--? About Start-->
+    
+    <!-- About  End-->
+    <!--? All startups Start -->
+   
+    <!--All startups End -->
+    <!--? Gallery Area Start -->
+    
+    <!-- Gallery Area End -->
+     <!--? Contact form Start -->
+    
+	 <div class="contact-form-main">
+        <div class="container">
+            <div class="row" style="font-size:16px">
+                <div class="col-md-6">
+                  
+                        <!--Section Tittle  -->
+                        <div class="form-tittle">
+                            <div class="row">
+                                <div class="col-xl-12">
+                                    <div class="section-tittle section-tittle2">
+                                        <span>Heart Disease Prediction</span>
+                                        <h3></h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Section Tittle  id="contact-form" -->
+                       <form name="form1" action="" method="POST">
+                          
+						  <h4 style="color:#990000">Demographic Data</h4>
+						   <div class="row">
+						   
+						   	<div class="col-md-6">
+								<label>Name</label>
+                                <input type="text" name="name" placeholder="" class="box" required>
+							</div>
+							<div class="col-md-6">
+								<label>Age</label>
+							  	<input type="text" name="age" placeholder="" class="box" required>
+							</div>
+						   </div>
+						   <br>
+						   
+						   
+						   <div class="row">
+						   
+						   	<div class="col-md-6">
+								<label>Gender</label>
+                                <select name="gender" class="box" required>
+							  <option value="">-Gender-</option>
+							  <option value="1">Male</option>
+							  <option value="0">Female</option>
+							  </select>
+							</div>
+							
+						   </div>
+						   <br>
+						   
+						   
+						   <div class="row">
+						   	<div class="col-md-6">
+								<label>Height (cm)</label>
+                                <input type="text" name="height" placeholder="" class="box" required>
+							</div>
+							<div class="col-md-6">
+								<label>Weight (Kg)</label>
+							  	<input type="text" name="weight" placeholder="" class="box" required>
+							</div>
+						   </div>
+						   <br>
+						   <div class="row">
+						   	<div class="col-md-6">
+								<label>Alcohol Consumption</label>
+                                 <select name="alcohol" class="box" required>
+							   <option value="0">None</option>
+            <option value="0">Low</option>
+            <option value="1">Moderate</option>
+            <option value="2">High</option>
+							  </select>
+							</div>
+							
+							<div class="col-md-6">
+								<label>Smoking Habbit</label>
+							  	 <select name="smoke" class="box" required>
+							  <option value="0">-Select-</option>
+							  <option value="1">Yes</option>
+            <option value="0">No</option>
+							  </select>
+							</div>
+						   </div>
+						   <br>
+						   
+						   <div class="row">
+						   
+						   <div class="col-md-6">
+								<label>Physical Activity Level</label>
+							  	 <select name="physical_activity" class="box" required>
+							  <option value="0">-Select-</option>
+							   <option value="0">Low</option>
+            			<option value="1">Moderate</option>
+            			<option value="2">High</option>
+							  </select>
+							</div>
+						   	<div class="col-md-6">
+								<label>Blood Group</label>
+                                <select name="blood_grp" class="box" required>
+							  <option value="">-Blood Group-</option>
+							  <option>A+ve</option>
+								<option>A1+ve</option>
+								<option>A-ve</option>
+								<option>AB+ve</option>
+								<option>AB-ve</option>
+								<option>B+ve</option>
+								<option>B-ve</option>
+								<option>O+ve</option>
+								<option>O-ve</option>
+							  </select>
+							</div>
+							<div class="col-md-6">
+								
+							</div>
+						   </div>
+						   <br>
+						   <br>
+						   
+						   
+						   
+						   <h4 style="color:#003399">Health Symptoms</h4>
+						   <div class="row">
+						   	<div class="col-md-6">
+								<label>Diabetes</label>
+                                 <select name="diabetes" class="box" required>
+							  <option value="1">Yes</option>
+            					<option value="0">No</option>
+							  </select>
+							</div>
+							<div class="col-md-6">
+								<label>Hypertension</label>
+							  	 <select name="hypertension" class="box" required>
+							  <option value="">-Select-</option>
+							    <option value="1">Yes</option>
+            					<option value="0">No</option>
+							  </select>
+							</div>
+						   </div>
+						   <br>
+						   
+			 <br>
+						   
+						   <div class="row">
+						   	<div class="col-md-6">			   
+						   
+						    <label>Cholesterol Level: [150 to 300]</label>
+        <input type="text" name="cholesterol" class="box" required>
+		</div>
+							<div class="col-md-6">
+        <label>Resting Blood Pressure: [90 to 179]</label>
+        <input type="text" name="resting_bp" class="box" required>
+		</div>
+		</div>
+		<br>
+		
+		   
+						   <div class="row">
+						   	<div class="col-md-6">
+        <label>Heart Rate: [60 to 129]</label>
+        <input type="text" name="heart_rate" class="box" required>
+</div>
+							<div class="col-md-6">
+        <label>Family History:</label>
+        <select name="family_history" class="box">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select>
+		</div>
+		</div>
+		
+	 <br>
+						   
+						   <div class="row">
+						   	<div class="col-md-6">
+        <label>Stress Level:</label>
+        <select name="stress_level" class="box">
+            <option value="0">Low</option>
+            <option value="1">Moderate</option>
+            <option value="2">High</option>
+        </select>
+</div>
+							<div class="col-md-6">
+        <label>Chest Pain Type:</label>
+        <select name="chest_pain" class="box">
+            <option value="0">Asymptomatic</option>
+            <option value="1">Non-anginal</option>
+            <option value="2">Atypical</option>
+            <option value="3">Typical</option>
+        </select>
+		</div>
+		</div>
+
+
+		 <br>
+						   
+						   <div class="row">
+						   	<div class="col-md-6">
+        <label>Thalassemia:</label>
+        <select name="thalassemia" class="box">
+            <option value="0">Normal</option>
+            <option value="1">Fixed defect</option>
+            <option value="2">Reversible defect</option>
+        </select>
+</div>
+							<div class="col-md-6">
+        <label>Fasting Blood Sugar:</label>
+        <select name="fasting_blood_sugar" class="box">
+            <option value="1">High</option>
+            <option value="0">Normal</option>
+        </select>
+		</div>
+		</div>
+		
+
+		 <br>
+						   
+						   <div class="row">
+						   	<div class="col-md-6">
+        <label>ECG Results:</label>
+        <select name="ecg_results" class="box">
+            <option value="0">Normal</option>
+            <option value="1">ST-T abnormality</option>
+            <option value="2">Left Ventricular Hypertrophy</option>
+        </select>
+</div>
+							<div class="col-md-6">
+        <label>Previous Heart Problems:</label>
+        <select name="previous_heart_problems" class="box">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select>
+		</div>
+		</div>
+
+		 <br>
+						   
+						   <div class="row">
+						   	<div class="col-md-6">
+        <label>Sleep Hours Per Day: [4 to 10]</label>
+        <input type="text" name="sleep_hours" class="box" required>
+</div>
+							<div class="col-md-6">
+        <label>Exercise Induced Angina</label>
+        <select name="exercise_induced_angina" class="box">
+		<option value="">-Select-</option>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select>
+		</div>
+		</div>
+
+
+		 <br>
+						   
+						   <div class="row">
+						   	<div class="col-md-6">
+        <label>Max Heart Rate Achieved [100 to 199]</label>
+        <input type="text" name="max_heart_rate" class="box" required>
+</div>
+							<div class="col-md-6">
+        <label>Temperature [0 to 40]</label>
+      <input type="text" name="temp" class="box" required>
+		</div>
+		</div>
+
+				<br>		   
+						   
+						   <div class="row">
+						   	<div class="col-md-6">
+								
+							</div>
+							<div class="col-md-6">
+								  <button class="btn" type="submit">Submit Now <i class="ti-arrow-right"></i> </button>
+							</div>
+						   </div>
+						   <br>
+						   
+                        </form>
+						
+						
+           </div>
+					
+			<div class="col-md-6">
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			{% if msg=="" %}
+			
+            <img src="../static/assets/img/gallery/about2.png" class="img-fluid" alt="">
+			{% else %}
+				<h2 style="color:#000099">Predicted Result</h2>
+				{% if sms=="1" %}
+				<p>Risk Level: {{result}}</p>
+				<span style="color:#FF0000">{{msg}}</span>
+				
+				<br>
+				<span>Alert has sent to Doctor: {{dname}}</span>
+				
+				<iframe src="http://iotcloud.co.in/testsms/sms.php?sms=emr&name={{dname}}&mess={{mess1}}&mobile={{mobile}}" width="10" height="10" frameborder="0"></iframe>
+				{% elif sms=="2" %}
+				<p>Risk Level: {{result}}</p>
+				<span>{{msg}}</span>
+				{% else %}
+				<p>Risk Level: {{result}}</p>
+				<span>{{msg}}</span>
+				
+				{% endif %}
+			
+				
+				<h3>Confidential Score: {{acc}}%</h3>
+				<p><img src="../static/acc.png" class="img-fluid"></p>
+				{% if result=="High" %}
+				<h4 style="color:#009900">First Aid</h4>
+				<table class="table">
+					{% for fs in fdata %}
+					<tr>
+					<td>{{fs[1]}}</td>
+					<td>{{fs[2]}}</td>
+					</tr>
+					{% endfor %}
+				</table>
+				<p>&nbsp;</p>
+				<h4 style="color:#009900">Recommended Specialists</h4>
+									{% for rs in fdata4 %}
+									<h3 align="left">Doctor: {{rs[1]}}</h3>
+									<h4 align="left">{{rs[5]}}, {{rs[6]}}</h4>							
+									<h4 align="left">Mobile No.: {{rs[3]}}, Email: {{rs[4]}}</h4>
+									<br>
+									{% endfor %}
+				{% elif result=="Moderate" %}
+				<h4 style="color:#009900">Heart Healthy Foods / Drinks</h4>
+				<table class="table">
+					{% for fs in fdata2 %}
+					<tr>
+					<td>{{fs[1]}}</td>
+					<td>{{fs[2]}}</td>
+					</tr>
+					{% endfor %}
+				</table>
+				<p>&nbsp;</p>
+				
+				<h4 style="color:#FF3300">Foods to Avoid</h4>
+				<table class="table">
+					{% for fs2 in fdata3 %}
+					<tr>
+					<td>{{fs2[1]}}</td>
+					<td>{{fs2[2]}}</td>
+					</tr>
+					{% endfor %}
+				</table>
+				{% endif %}
+				
+				<p align="center"> <a href="/test_report?tid={{tid}}" target="_blank" class="btn btn-info">Test Report</a></p>
+			{% endif %}
+        	</div>
+					
+				
+            </div>
+        </div>
+    
+    </div>
+    <!-- Contact form End -->
+    <!--? gallery Products Start -->
+   
+    <!-- gallery Products End -->
+     <!--? Team Start -->
+   
+    <!-- Team End -->
+    </main>
+    <footer>
+        <!--? Footer Start-->
+        <div class="footer-area section-bg" data-background="../static/assets/img/gallery/footer_bg.jpg">
+            <div class="container">
+                <div class="footer-top footer-padding">
+                    <div class="row d-flex justify-content-between">
+                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-8">
+                            <div class="single-footer-caption mb-50">
+                                <!-- logo -->
+                                <div class="footer-logo">
+                                    <a href="index.html"><img src="../static/assets/img/logo/logo2_footer.png" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-5">
+                            <div class="single-footer-caption mb-50">
+                               
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-8">
+                            <div class="single-footer-caption mb-50">
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="row d-flex justify-content-between align-items-center">
+                        <div class="col-xl-9 col-lg-8">
+                            <div class="footer-copy-right">
+                                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Heart Disease Prediction <a href="https://colorlib.com" target="_blank"></a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4">
+                            <!-- Footer Social -->
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End-->
+    </footer>
+    <!-- Scroll Up -->
+    <div id="back-top" >
+        <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+    </div>
+
+    <!-- JS here -->
+
+    <script src="../static/assets/js/vendor/modernizr-3.5.0.min.js"></script>
+    <!-- Jquery, Popper, Bootstrap -->
+    <script src="../static/assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="../static/assets/js/popper.min.js"></script>
+    <script src="../static/assets/js/bootstrap.min.js"></script>
+    <!-- Jquery Mobile Menu -->
+    <script src="../static/assets/js/jquery.slicknav.min.js"></script>
+
+    <!-- Jquery Slick , Owl-Carousel Plugins -->
+    <script src="../static/assets/js/owl.carousel.min.js"></script>
+    <script src="../static/assets/js/slick.min.js"></script>
+    <!-- One Page, Animated-HeadLin -->
+    <script src="../static/assets/js/wow.min.js"></script>
+    <script src="../static/assets/js/animated.headline.js"></script>
+    <script src="../static/assets/js/jquery.magnific-popup.js"></script>
+
+    <!-- Date Picker -->
+    <script src="../static/assets/js/gijgo.min.js"></script>
+    <!-- Nice-select, sticky -->
+    <script src="../static/assets/js/jquery.nice-select.min.js"></script>
+    <script src="../static/assets/js/jquery.sticky.js"></script>
+    
+    <!-- counter , waypoint -->
+    <script src="../static/assets/js/jquery.counterup.min.js"></script>
+    <script src="../static/assets/js/waypoints.min.js"></script>
+    <script src="../static/assets/js/jquery.countdown.min.js"></script>
+    <!-- contact js -->
+    <!--<script src="../static/assets/js/contact.js"></script>
+    <script src="../static/assets/js/jquery.form.js"></script>
+    <script src="../static/assets/js/jquery.validate.min.js"></script>
+    <script src="../static/assets/js/mail-script.js"></script>
+    <script src="../static/assets/js/jquery.ajaxchimp.min.js"></script>
+    -->
+    <!-- Jquery Plugins, main Jquery -->	
+    <script src="../static/assets/js/plugins.js"></script>
+    <script src="../static/assets/js/main.js"></script>
+    
+    </body>
+</html>

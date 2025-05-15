@@ -1,0 +1,232 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title> Heart Disease Prediction </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+	<!-- CSS here -->
+	<link rel="stylesheet" href="../static/assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../static/assets/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="../static/assets/css/slicknav.css">
+    <link rel="stylesheet" href="../static/assets/css/flaticon.css">
+    <link rel="stylesheet" href="../static/assets/css/gijgo.css">
+    <link rel="stylesheet" href="../static/assets/css/animate.min.css">
+    <link rel="stylesheet" href="../static/assets/css/animated-headline.css">
+	<link rel="stylesheet" href="../static/assets/css/magnific-popup.css">
+	<link rel="stylesheet" href="../static/assets/css/fontawesome-all.min.css">
+	<link rel="stylesheet" href="../static/assets/css/themify-icons.css">
+	<link rel="stylesheet" href="../static/assets/css/slick.css">
+	<link rel="stylesheet" href="../static/assets/css/nice-select.css">
+	<link rel="stylesheet" href="../static/assets/css/style.css">
+
+	
+	
+</head>
+<body>
+
+     <!--? Contact form Start -->
+	
+	 <p>&nbsp;</p>
+	 <div class="card-body" id="mycard">
+	  <div class='container' style='text-align:center; '>
+ <p align="center"><strong>Patient's Test Result </strong></p>
+
+
+ 
+ 			<div class="row">
+				<div class="col-md-1"></div>
+				<div class="col-md-10">
+                
+				  
+				  <table class="table">
+				  	<tr style="background-color:#0033CC; color:#FFFFFF">
+						<td colspan="2">Patient: {{data1[1]}}</td>
+						<td colspan="2" align="left">Patient ID: {{data1[6]}}</td>
+					</tr>
+					<tr style="background-color:#DFF4FF; color:#000066">
+				  	<td colspan="2">Demographic Data</td>
+					<td colspan="2">
+					
+					</td>
+				  	<tr>
+					
+					<tr>
+						<td>Age</td>
+						<td>{{rs[4]}}</td>
+						<td>Gender</td>
+						<td>
+						{% if rs[5]==1 %} Male {% else %} Female {% endif %}
+						</td>
+					</tr>
+					<tr>
+						<td>Height (cm)</td>
+						<td>{{rs[7]}}</td>
+						<td>Weight (Kg)</td>
+						<td>{{rs[6]}}</td>
+					</tr>
+					
+					<tr>
+						<td>Physical Activity Level</td>
+						<td>{{rs[11]}}</td>
+						<td>Blood Group</td>
+						<td>{{rs[8]}}</td>
+					</tr>
+					
+					<tr>
+						<td>Alcohol Consumption
+</td>
+						<td>{% if rs[9]==2 %} High {% elif rs[9]==1 %} Moderate {% else %}Low {% endif %}</td>
+						<td>Smoking Habbit</td>
+						<td>{{rs[10]}}</td>
+					</tr>
+					
+					<tr style="background-color:#DFF4FF; color:#000066">
+				  	<td colspan="4">Health Symptoms</td>
+				  	<tr>
+					
+				
+					<tr>
+						<td>Diabetes</td>
+						<td>{{rs[12]}}</td>
+						<td>Hypertension</td>
+						<td>{{rs[13]}}</td>
+					</tr>
+					<tr>
+						<td>Cholesterol Level</td>
+						<td>{{rs[14]}}</td>
+						<td>Resting Blood Pressure</td>
+						<td>{{rs[15]}}</td>
+					</tr>
+					<tr>
+						<td>Heart Rate</td>
+						<td>{{rs[16]}}</td>
+						<td>Family History</td>
+						<td>{{rs[17]}}</td>
+					</tr>
+					<tr>
+						<td>Stress Level</td>
+						<td>{% if rs[18]==2 %} High {% elif rs[18]==1 %} Moderate {% else %}Low {% endif %}</td>
+						<td>Chest Pain</td>
+						<td>{% if rs[19]==3 %} Typical {% elif rs[19]==2 %} Atypical {% elif rs[19]==1 %} Non-anginal {% else %}Asymptomatic {% endif %}</td>
+					</tr>
+					<tr>
+						<td>Thalassemia</td>
+						<td>{% if rs[20]==2 %} Reversible defect {% elif rs[20]==1 %} Fixed defect {% else %}Reversible defect {% endif %}</td>
+						<td>Fasting Blood Sugar</td>
+						<td>{{rs[21]}}</td>
+					</tr>
+					<tr>
+						<td>ECG Results:</td>
+						<td>{% if rs[22]==2 %} Left Ventricular Hypertrophy {% elif rs[22]==1 %} ST-T abnormality {% else %}Normal {% endif %}</td>
+						<td>Previous Heart Problems</td>
+						<td>{{rs[23]}}</td>
+					</tr>
+					<tr>
+						<td>Sleep Hours Per Day</td>
+						<td>{{rs[24]}}</td>
+						<td>Exercise Induced Angina</td>
+						<td>{{rs[25]}}</td>
+					</tr>
+					<tr>
+						<td>Max Heart Rate Achieved</td>
+						<td>{{rs[26]}}</td>
+						<td>Temperature</td>
+						<td>{{rs[27]}}</td>
+					</tr>
+				
+					
+						<tr>
+						<td>BMI</td>
+						<td>{{rs[28]}}</td>
+						<td>Heart Attack Risk Status</td>
+						<td>
+						{% if rs[29]=="High" %}
+						<span style="color:#FF0000">High</span>
+						{% elif rs[29]=="Moderate" %}
+						<span style="color:#003399">Moderate</span>
+						{% else %}
+						<span style="color:#009900">Low</span>
+						{% endif %}
+						</td>
+					</tr>
+					
+				  </table>
+				  <hr>
+				  
+				 
+				 </div>
+				</div>
+                  <p>&nbsp;</p>
+				  
+				  <p></p>
+    
+</div>
+  </div>
+  <br>
+
+<p align="center"> <button onClick="downloadPDF()" style="color:#000000">PDF Download</button></p>
+
+       
+            
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+<script>
+    function downloadPDF() {
+        const element = document.getElementById("mycard");
+
+        html2pdf(element);
+    }
+</script>
+    <!-- Contact form End -->
+    <!--? gallery Products Start -->
+   
+    <!-- gallery Products End -->
+     <!--? Team Start -->
+   
+
+    <!-- JS here -->
+
+    <script src="../static/assets/js/vendor/modernizr-3.5.0.min.js"></script>
+    <!-- Jquery, Popper, Bootstrap -->
+    <script src="../static/assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="../static/assets/js/popper.min.js"></script>
+    <script src="../static/assets/js/bootstrap.min.js"></script>
+    <!-- Jquery Mobile Menu -->
+    <script src="../static/assets/js/jquery.slicknav.min.js"></script>
+
+    <!-- Jquery Slick , Owl-Carousel Plugins -->
+    <script src="../static/assets/js/owl.carousel.min.js"></script>
+    <script src="../static/assets/js/slick.min.js"></script>
+    <!-- One Page, Animated-HeadLin -->
+    <script src="../static/assets/js/wow.min.js"></script>
+    <script src="../static/assets/js/animated.headline.js"></script>
+    <script src="../static/assets/js/jquery.magnific-popup.js"></script>
+
+    <!-- Date Picker -->
+    <script src="../static/assets/js/gijgo.min.js"></script>
+    <!-- Nice-select, sticky -->
+    <script src="../static/assets/js/jquery.nice-select.min.js"></script>
+    <script src="../static/assets/js/jquery.sticky.js"></script>
+    
+    <!-- counter , waypoint -->
+    <script src="../static/assets/js/jquery.counterup.min.js"></script>
+    <script src="../static/assets/js/waypoints.min.js"></script>
+    <script src="../static/assets/js/jquery.countdown.min.js"></script>
+    <!-- contact js -->
+    <script src="../static/assets/js/contact.js"></script>
+    <script src="../static/assets/js/jquery.form.js"></script>
+    <script src="../static/assets/js/jquery.validate.min.js"></script>
+    <script src="../static/assets/js/mail-script.js"></script>
+    <script src="../static/assets/js/jquery.ajaxchimp.min.js"></script>
+    
+    <!-- Jquery Plugins, main Jquery -->	
+    <script src="../static/assets/js/plugins.js"></script>
+    <script src="../static/assets/js/main.js"></script>
+    
+    </body>
+</html>
