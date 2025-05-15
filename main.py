@@ -45,7 +45,7 @@ app = Flask(__name__)
 ##session key
 app.secret_key = 'abcdef'
 #######
-UPLOAD_FOLDER = 'static/upload'
+UPLOAD_FOLDER = 'upload'
 ALLOWED_EXTENSIONS = { 'csv'}
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 #####
@@ -580,7 +580,7 @@ def pat_test():
         #print(f"Predicted Class (Risk Level): {np.argmax(confidence_scores)}")
         #print(f"Confidence Score: {max(confidence_scores[0])}")
         con_score=max(confidence_scores[0])
-        file_path="static/acc.png"
+        file_path="acc.png"
         if os.path.exists(file_path):
             os.remove(file_path)
       
